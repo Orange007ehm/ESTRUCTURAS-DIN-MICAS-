@@ -47,8 +47,8 @@ public void transformada06(int dimen, int numInit){
     
     public void transformada08(int dimen, int numInit){
         String[][] matriz = new String[dimen][dimen];
-        for (int i = 0; i < matriz.length; f++) {
-            for (int c = 0; c <= (dimen-1)-i ; c++) {
+        for (int f = 0; f < matriz.length; f++) {
+            for (int c = 0; c <= (dimen-1)-f ; c++) {
                 matriz[f][(c+f)]=" "+numInit;
                 numInit++;
             }
@@ -97,7 +97,7 @@ public void transformada16(int dimen, int valInit) {
                 }
             } else {
                 for (int f = matriz.length-1; f >=0 ; f--) {
-                    matriz[i][c]=""+numInit;
+                    matriz[f][c]=""+numInit;
                     numInit++;
                 }                
             } 
@@ -105,3 +105,21 @@ public void transformada16(int dimen, int valInit) {
         TransformadasM tm=new TransformadasM();  
         tm.imprimirContenidoMatrizCadena(matriz);
         }
+        
+       public void transformada22(int dimen, int numInit) {
+        String[][] matriz=new String[dimen][dimen];// f = Fila; j=Columna
+        for (int c = 0; c < matriz[0].length; c++) {
+            if (c%2==0) {
+                for (int f = 0; f < matriz.length; f++) {
+                    matriz[f][c]=""+numInit;
+                    numInit++;
+                }
+            } else {
+                for (int f = matriz.length-1; f >=0 ; f--) {
+                    matriz[f][c]=""+numInit;
+                    numInit++;
+                }               
+            } 
+        tm.imprimirContenidoMatrizCadena(matriz);
+        }
+        
