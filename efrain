@@ -1,0 +1,49 @@
+ public void transformada14(int dimen, int valInit) {
+        String[][] matriz=new String[dimen][dimen];// f =filas, c=columnas
+        for (int f = 0; f < matriz.length; f++) {
+            for (int c = 0; c <= f; c++) {
+                matriz[c][f]=""+valInit;
+                valInit++;
+            }
+        }
+        imprimirMatrizCadena(matriz);
+    }
+public void transformada16(int dimen, int valInit) {
+       String[][] matriz=new String[dimen][dimen];// f =filas, c=columnas
+       for (int f = 0; f < matriz.length; f++) {
+            for (int c = 0; c <= f; c++) {
+                matriz[(dimen-1)-c][f]=""+valInit;
+                valInit++;
+            }
+        }
+        imprimirMatrizCadena(matriz);
+    }
+ public void transformada20(int dimen, int numInit) {
+            String[][] matriz=new String[dimen][dimen];// f = Fila; c=Columna
+            for (int f = 0; f < matriz.length; f++) {
+                for (int c = 0; c <=f; c++) {
+                    matriz[(dimen-1)-c][(dimen-1)-f]=""+numInit;
+                    numInit++;
+                }
+            }
+            EjercicioMatrices mt=new EjercicioMatrices();  
+            mt.imprimirContenidoMatrizCadena(matriz);        
+        }
+    public void transformada21(int dimen, int numInit) {
+        String[][] matriz=new String[dimen][dimen];// f = Fila; j=Columna
+        for (int c = 0; c < matriz[0].length; c++) {
+            if (c%2==0) {
+                for (int f = 0; f < matriz.length; f++) {
+                    matriz[f][c]=""+numInit;
+                    numInit++;
+                }
+            } else {
+                for (int f = matriz.length-1; f >=0 ; f--) {
+                    matriz[i][c]=""+numInit;
+                    numInit++;
+                }                
+            } 
+        
+        TransformadasM tm=new TransformadasM();  
+        tm.imprimirContenidoMatrizCadena(matriz);
+        }
